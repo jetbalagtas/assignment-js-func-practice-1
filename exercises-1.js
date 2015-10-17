@@ -14,12 +14,18 @@
 
 function forEach(array, callback){
     // YOUR CODE HERE
-
+    for(var i = 0; i < array.length; i++);
+    callback(array[i]);
 }
+// Note to self: callbacks are closures and have access to the containing function's scope, so the callback function can access the containing function's variables, and even the variables from the global scope.
+// Note to self: When we pass a callback function as an argument to another function, the callback is executed at some point inside the containing function’s body just as if the callback were defined in the containing function.
+// Reference: http://javascriptissexy.com/understand-javascript-callback-functions-and-use-them/
 
 // testing your code with console.assert
 var total = 1;
 forEach([1, 2, 3, 4], function(a){ total *= a; });
+  // for(var i = 0; i < a.length; i++);
+  // (a[i]);
 // and finally assert; if this fails, the program stops
 console.assert(total === 24);
 
