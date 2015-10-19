@@ -13,9 +13,10 @@
 // 0. write your own forEach() that takes two arguments: an array, and a callback
 
 function forEach(array, callback){
-    // YOUR CODE HERE
-    for(var i = 0; i < array.length; i++);
-    callback(array[i]);
+    for (var i = 0; i < array.length; i++) {
+       callback(array[i]);
+    };
+    return;
 }
 // Note to self: callbacks are closures and have access to the containing function's scope, so the callback function can access the containing function's variables, and even the variables from the global scope.
 // Note to self: When we pass a callback function as an argument to another function, the callback is executed at some point inside the containing function’s body just as if the callback were defined in the containing function.
@@ -39,7 +40,7 @@ function sum(){
     // YOUR CODE HERE
     var sumTot = 0;
     forEach(args, function(a){
-      sumTot += a;
+      sumTot += parseInt(a);
     });
     return sumTot;
 }
@@ -56,7 +57,7 @@ function average(){
     // YOUR CODE HERE
     var avgTot = 0;
     forEach(args, function(a){
-      avgTot *= a;
+      avgTot += a;
     });
     return avgTot / args.length;
 }
@@ -92,9 +93,9 @@ function longest(){
 
     // .. do something with each element of args
     // YOUR CODE HERE
-    var long = 0;
+    var long = "";
     forEach(args, function(a){
-      if (a > a.length) {
+      if (a.length > long.length) {
         long = a;
       }
     });
