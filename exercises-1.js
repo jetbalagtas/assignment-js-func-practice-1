@@ -114,12 +114,26 @@ function longest(){
  */
 
 // .sort()
+var badBoys = ["Tommy", "Steve", "Rodney", "Lance"];
+var powellPeraltaBoys = badBoys.sort();
+
+console.assert(powellPeraltaBoys[0] === "Lance");
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 // .concat()
+var otherSkaters = ["Tony", "Ryan"];
+var richSkaters = powellPeraltaBoys.concat(otherSkaters);
+// console.log(richSkaters);
+console.assert(richSkaters[4] === "Tony");
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 
 // .indexOf()
+var stevesIndex = richSkaters.indexOf("Steve");
+console.assert(stevesIndex === 2);
+// Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 
 // .split()
+
 
 // .join()
 
